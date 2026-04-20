@@ -9,57 +9,167 @@
 </head>
 
 <body>
-  <div>
-    <header>
-      <h1 style="font-size: 30px; margin: 0">Báo Mới</h1>
-      <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm..." style="font-size: medium" />
-        <button class="ntbutton"> Find </button>
-      </div>
-      <div class="logo">
-        <img src="../img/logo.webp" alt="Logo" />
-      </div>
-    </header>
-    <nav>
-      <div class="nav-container">
-        <ul>
-          <li><a href="./Trang_chu.html">Trang chủ</a></li>
-          <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
-          <li><a href="./Tin_tuc.html">Tin tức</a></li>
-          <li><a href="./The_thao.html">Thể thao</a></li>
-          <li><a href="./Giai_tri.html">Giải trí</a></li>
-          <li><a href="./Lien_he.html">Liên hệ</a></li>
-          <li><a href="./FAQ.html">FAQ</a></li>
-        </ul>
-      </div>
-    </nav>
 
+  <!-- HEADER -->
+  <header>
+    <h1>Báo Mới</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Tìm kiếm..." />
+      <button class="ntbutton">Find</button>
+    </div>
+    <div class="logo">
+      <img src="../img/logo.webp" alt="Logo" />
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <ul>
+        <li><a href="./Trang_chu.html" class="active">Trang chủ</a></li>
+        <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
+        <li><a href="./Tin_tuc.html">Tin tức</a></li>
+        <li><a href="./The_thao.html">Thể thao</a></li>
+        <li><a href="./Giai_tri.html">Giải trí</a></li>
+        <li><a href="./Lien_he.html">Liên hệ</a></li>
+        <li><a href="./FAQ.html">FAQ</a></li>
+      </ul>
+      <span class="menu-icon">☰</span>
+    </div>
+  </nav>
+
+  <!-- PAGE BODY -->
+  <div class="page-wrapper">
     <main>
-      <div class="container">
-        Lorem ipsum dolor sit ametmet consectetur adipisicing elit. At, nam..
+      <!-- HERO [A] -->
+      <div class="hero">
+        <img src="https://via.placeholder.com/600x350" alt="Hero image">
+        <div class="hero-content">
+          <h2>Tổng Bí thư: Việt Nam kiên quyết bảo vệ chủ quyền biển đảo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <div class="hero-meta">
+            <span>Nguyễn Văn A</span>
+            <span>•</span>
+            <span>20/04/2026 09:15</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRID 2 CỘT TIN PHỤ [B] -->
+      <div class="news-grid-2col">
+        <div class="news-card-small">
+          <img src="https://via.placeholder.com/300x180" alt="">
+          <h3>Đội tuyển Việt Nam thắng trận giao hữu trước SEA Games</h3>
+          <span class="comment-badge">💬 87</span>
+        </div>
+        <div class="news-card-small">
+          <img src="https://via.placeholder.com/300x180" alt="">
+          <h3>Giá vàng hôm nay tăng kỷ lục 800.000 đồng/lượng</h3>
+          <span class="comment-badge">💬 124</span>
+        </div>
+      </div>
+
+      <!-- GÓC NHÌN [C] -->
+      <div class="section-header">
+        <h2>Góc nhìn</h2>
+      </div>
+      <div class="goc-nhin-card">
+        <img src="https://via.placeholder.com/100x100" alt="Tác giả">
+        <div class="goc-nhin-content">
+          <h3>AI sẽ thay đổi ngành báo chí như thế nào trong 5 năm tới?</h3>
+          <div class="author-info">
+            <img src="https://via.placeholder.com/40" alt="avatar" class="author-avatar">
+            <span>TS. Trần Thị B</span>
+          </div>
+          <span class="comment-badge">💬 56</span>
+        </div>
+      </div>
+
+      <!-- SECTION XUNG ĐỘT TRUNG ĐÔNG [D] -->
+      <div class="section-header">
+        <h2>Xung đột Trung Đông</h2>
+        <span class="section-tabs">Quốc tế | Trung Đông</span>
+      </div>
+      <div class="news-grid-3col">
+        <div class="news-card-small">
+          <img src="https://via.placeholder.com/200x130" alt="">
+          <h3>Israel tiếp tục không kích Gaza, hàng trăm người thiệt mạng</h3>
+          <p class="short-desc">Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div class="news-card-small">
+          <img src="https://via.placeholder.com/200x130" alt="">
+          <h3>Iran cảnh báo sẽ đáp trả mạnh tay nếu bị tấn công</h3>
+          <p class="short-desc">Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div class="news-card-small">
+          <img src="https://via.placeholder.com/200x130" alt="">
+          <h3>Mỹ kêu gọi ngừng bắn khẩn cấp tại khu vực</h3>
+          <p class="short-desc">Lorem ipsum dolor sit amet...</p>
+        </div>
+      </div>
+
+      <!-- SECTION KINH DOANH [E] -->
+      <div class="section-header">
+        <h2>Kinh doanh</h2>
+        <span class="section-tabs">Trong nước | Quốc tế</span>
+      </div>
+      <div class="news-grid-3col">
+        <div class="news-card-small">
+          <img src="https://via.placeholder.com/200x130" alt="">
+          <h3>Viettel đạt doanh thu kỷ lục 150.000 tỷ đồng quý I</h3>
+          <p class="short-desc">Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div class="news-card-small">
+          <img src="https://via.placeholder.com/200x130" alt="">
+          <h3>Chứng khoán Việt Nam tăng điểm mạnh nhất châu Á</h3>
+          <p class="short-desc">Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div class="news-card-small">
+          <img src="https://via.placeholder.com/200x130" alt="">
+          <h3>Giá xăng dầu giảm mạnh, người dân tiết kiệm chi phí</h3>
+          <p class="short-desc">Lorem ipsum dolor sit amet...</p>
+        </div>
       </div>
     </main>
-    <section>
-      <article>
-        <p> Tóm tắt: bạn tạo ra một nhánh mới bằng git branch tên_nhánh, sau đó rẽ vào nhánh đó bằng git checkout
-          tên_nhánh; sau lưu lại các thay đổi trong ngữ cảnh này, bạn có thể rẽ qua nhánh khác một cách dễ dàng. Mỗi khi
-          rẽ vào một nhánh, Git sẽ thay thư mục làm việc cho tương ứng với nhánh đó; vì vậy, bạn không phải xử lý nhiều
-          thư mục khác nhau cho nhiều nhánh (có nghĩa là, chỉ dùng một thư mục cho nhiều nhánh. Điều này rất khác với
-          cách tiếp cận của Subversion -- ND). Cuối cùng, để tích hợp hai nhánh với nhau, dùng git merge. Có thể dễ dàng
-          tích hợp nhiều lần hai nhánh với nhau, hoặc có thể xóa một nhánh sau khi nó đã được tích hợp.</p>
-      </article>
-      <aside>
-        <p>Lệnh git branch là để quản lý các nhánh; nó có thể làm nhiều việc khác nhau, nên chúng ta chỉ để cập một số
-          việc cơ bản của lệnh này: liệt kê, tạo hoặc xóa nhánh. Ta cũng đề cập tới lệnh git checkout để rẽ vào một
-          nhánh bất kỳ.</p>
-      </aside>
-    </section>
 
-    <footer>
-      <p>&copy; 2023 Báo Mới. All rights reserved.</p>
-    </footer>
+    <!-- ASIDE -->
+    <aside>
+      <div class="ad-banner">
+        <img src="https://via.placeholder.com/300x400" alt="Quảng cáo">
+      </div>
+    </aside>
   </div>
-  <script src="../javascript/prj.js"> </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Báo Mới</h3>
+        <p>Cập nhật tin tức nhanh nhất, chính xác nhất 24/7.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Danh mục</h4>
+        <ul>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Thế giới</a></li>
+          <li><a href="#">Kinh tế</a></li>
+          <li><a href="#">Thể thao</a></li>
+          <li><a href="#">Giải trí</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <p>Email: info@baomoi.vn<br>Hotline: 1900 1234</p>
+        <div class="social">
+          <span>FB</span> <span>YT</span> <span>TW</span>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Báo Mới. All rights reserved.</p>
+  </footer>
+
+  <script src="../javascript/prj.js"></script>
 </body>
 
 </html>
