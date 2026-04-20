@@ -1,24 +1,23 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styleprj.css" />
-    <link rel="stylesheet" href="../javascript/prj.js" />
-    <title>Báo Mới</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/styleprj.css" />
+  <title>Báo Mới</title>
+</head>
+
+<body>
+  <div>
     <header>
       <h1 style="font-size: 30px; margin: 0">Báo Mới</h1>
+      <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm..." style="font-size: medium" />
+        <button class="ntbutton"> Find </button>
+      </div>
       <div class="logo">
         <img src="../img/logo.webp" alt="Logo" />
-      </div>
-      <div class="search-box">
-        <input
-          type="text"
-          placeholder="Tìm kiếm..."
-          style="font-size: medium"
-        />
       </div>
     </header>
     <nav>
@@ -40,10 +39,27 @@
         Lorem ipsum dolor sit ametmet consectetur adipisicing elit. At, nam..
       </div>
     </main>
-    <aside>Lorem ipsum, dolor sit a</aside>
+    <section>
+      <article>
+        <p> Tóm tắt: bạn tạo ra một nhánh mới bằng git branch tên_nhánh, sau đó rẽ vào nhánh đó bằng git checkout
+          tên_nhánh; sau lưu lại các thay đổi trong ngữ cảnh này, bạn có thể rẽ qua nhánh khác một cách dễ dàng. Mỗi khi
+          rẽ vào một nhánh, Git sẽ thay thư mục làm việc cho tương ứng với nhánh đó; vì vậy, bạn không phải xử lý nhiều
+          thư mục khác nhau cho nhiều nhánh (có nghĩa là, chỉ dùng một thư mục cho nhiều nhánh. Điều này rất khác với
+          cách tiếp cận của Subversion -- ND). Cuối cùng, để tích hợp hai nhánh với nhau, dùng git merge. Có thể dễ dàng
+          tích hợp nhiều lần hai nhánh với nhau, hoặc có thể xóa một nhánh sau khi nó đã được tích hợp.</p>
+      </article>
+      <aside>
+        <p>Lệnh git branch là để quản lý các nhánh; nó có thể làm nhiều việc khác nhau, nên chúng ta chỉ để cập một số
+          việc cơ bản của lệnh này: liệt kê, tạo hoặc xóa nhánh. Ta cũng đề cập tới lệnh git checkout để rẽ vào một
+          nhánh bất kỳ.</p>
+      </aside>
+    </section>
 
     <footer>
       <p>&copy; 2023 Báo Mới. All rights reserved.</p>
     </footer>
-  </body>
+  </div>
+  <script src="../javascript/prj.js"> </script>
+</body>
+
 </html>
