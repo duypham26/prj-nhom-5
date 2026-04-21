@@ -1,48 +1,130 @@
 <!doctype html>
 <html lang="vi">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styleprj.css" />
-    <title>Báo Mới</title>
-  </head>
-  <body>
-    <header>
-      <h1 style="font-size: 30px; margin: 0">Báo Mới</h1>
-      <div class="logo">
-        <img src="../img/logo.webp" alt="Logo" />
-      </div>
-      <div class="search-box">
-        <input
-          type="text"
-          placeholder="Tìm kiếm..."
-          style="font-size: medium"
-        />
-      </div>
-    </header>
-    <nav>
-      <div class="nav-container">
-        <ul>
-          <li><a href="./Trang_chu.html">Trang chủ</a></li>
-          <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
-          <li><a href="./Tin_tuc.html">Tin tức</a></li>
-          <li><a href="./The_thao.html">Thể thao</a></li>
-          <li><a href="./Giai_tri.html">Giải trí</a></li>
-          <li><a href="./Lien_he.html">Liên hệ</a></li>
-          <li><a href="./FAQ.html">FAQ</a></li>
-        </ul>
-      </div>
-    </nav>
+    <link rel="stylesheet" href="../css/The_thao.css" />
+    <title>Thể thao - Báo Mới</title>
+</head>
+<body>
 
-    <main>
-      <div class="container">
-        Lorem ipsum dolor sit ametmet consectetur adipisicing elit. At, nam..
-      </div>
-    </main>
-    <aside>Lorem ipsum, dolor sit a</aside>
+    <!-- WRAPPER CHÍNH - STICKY FOOTER -->
+    <div class="wrapper">
 
-    <footer>
-      <p>&copy; 2023 Báo Mới. All rights reserved.</p>
-    </footer>
-  </body>
+        <!-- HEADER -->
+        <header>
+            <h1>Báo Mới</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button class="ntbutton">Find</button>
+            </div>
+            <div class="logo">
+                <img src="../img/logo.webp" alt="Logo" />
+            </div>
+        </header>
+
+        <!-- NAV -->
+        <nav>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="./Trang_chu.html">Trang chủ</a></li>
+                    <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
+                    <li><a href="./Tin_tuc.html">Tin tức</a></li>
+                    <li><a href="./The_thao.html" class="active">Thể thao</a></li>
+                    <li><a href="./Giai_tri.html">Giải trí</a></li>
+                    <li><a href="./Lien_he.html">Liên hệ</a></li>
+                    <li><a href="./FAQ.html">FAQ</a></li>
+                </ul>
+                <span class="menu-icon">☰</span>
+            </div>
+        </nav>
+
+        <!-- PAGE CONTENT -->
+        <div class="page-wrapper">
+            <main>
+                <!-- TIÊU ĐỀ CHÍNH -->
+                <div class="category-header">
+                    <h1>Thể thao</h1>
+                </div>
+
+                <!-- BÀI CHÍNH (Hero) -->
+                <div class="hero">
+                    <img src="../img/TT_ tu_hao_Vn.webp" alt="80 nam the thao vn">
+                    <div class="hero-content">
+                        <h2>Tự hào hành trình thể thao trong 80 năm của Việt Nam</h2>
+                        <p>Tiến bộ dần đều trong thể thao và gặt hái những danh hiệu và thành công trong nước, Việt Nam ngày sỡ hữu nhiều anh tài, quả đúng câu "Đất lành chim đậu."</p>
+                        <div class="hero-meta">
+                            <span>Báo Thể thao</span>
+                            <span>•</span>
+                            <span>21/04/2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 CỘT PHÍA DƯỚI HERO -->
+                <div class="news-grid-2col">
+                    <div class="news-card-medium">
+                        <img src="../img/TT_ban_cung_sea_game.webp" alt="Bắn cung SEA Games">
+                        <h3>ban cung vn</h3>
+                        <span class="comment-badge">💬 45</span>
+                    </div>
+                    <div class="news-card-medium">
+                        <img src="../img/TT_football_global.jpg" alt="Barca Ngoại hạng Anh">
+                        <h3>Barca vẫn còn cửa vô địch Ngoại hạng Anh nếu...</h3>
+                        <span class="comment-badge">💬 128</span>
+                    </div>
+                </div>
+
+                <!-- 4 TIN NHỎ DƯỚI -->
+                <div class="news-grid-4col">
+                    <div class="news-card-small">
+                        <img src="../img/TT_football_vn.jpg" alt="U17 Việt Nam">
+                        <h4>Sức hút đặc biệt của U17 Việt Nam</h4>
+                    </div>
+                    <div class="news-card-small">
+                        <img src="../img/TT_Basketball_vn.png" alt="U17 Việt Nam đấu">
+                        <h4>Bóng rổ vẫn luôn mang sức hút mãnh liệt trong lòng người hâm mộ thể thao</h4>
+                    </div>
+                    <div class="news-card-small">
+                        <img src="../img/TT_tenis_vn.jpg" alt="tenis vn">
+                        <h4>tennis</h4>
+                    </div>
+                    <div class="news-card-small">
+                        <img src="../img/TT_boxing.jpg" alt="U17 Việt Nam đấu">
+                        <h4>Cực căng thẳng giữa 2 boxers đẳng cấp thế giới</h4>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Báo Mới</h3>
+                    <p>Cập nhật tin tức nhanh nhất, chính xác nhất 24/7.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Danh mục</h4>
+                    <ul>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Thế giới</a></li>
+                        <li><a href="#">Kinh tế</a></li>
+                        <li><a href="#">Thể thao</a></li>
+                        <li><a href="#">Giải trí</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <p>Email: info@baomoi.vn<br>Hotline: 1900 1234</p>
+                    <div class="social">FB | YT | TW</div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Báo Mới. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="../javascript/prj.js"></script>
+</body>
 </html>
