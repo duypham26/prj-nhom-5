@@ -72,8 +72,10 @@ header h1 {
 }
 
 .logo img {
-    height: 60px;
+    height: 58px;
+    padding: 0px;
     display: block;
+    margin-top:10px;
 }
 
 /* NAV */
