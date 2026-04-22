@@ -23,8 +23,9 @@
       </div>
     </header>
     <nav>
+      <button class="menu-toggle">☰</button>
       <div class="nav-container">
-        <ul>
+        <ul id ="main_menu">
           <li><a href="./Trang_chu.html" class="active">Trang chủ</a></li>
           <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
           <li><a href="./Tin_tuc.html">Tin tức</a></li>
@@ -191,5 +192,21 @@
     <footer>
       <p>&copy; 2023 Báo Mới. All rights reserved.</p>
     </footer>
+    <script>
+  const menuBtn = document.querySelector('.menu-toggle');
+  const mainMenu = document.getElementById('main_menu');
+
+  menuBtn.addEventListener('click', function() {
+    // Bật tắt class 'active' để ẩn/hiện menu
+    mainMenu.classList.toggle('active');
+
+    // Kiểm tra nếu đang hiện thì đổi icon thành X, ngược lại thành ☰
+    if (mainMenu.classList.contains('active')) {
+      menuBtn.innerHTML = '✕';
+    } else {
+      menuBtn.innerHTML = '☰';
+    }
+  });
+</script>
   </body>
 </html>
