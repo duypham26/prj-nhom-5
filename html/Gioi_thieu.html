@@ -1,48 +1,326 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styleprj.css" />
-    <title>Báo Mới</title>
+    <title>Giới Thiệu - Báo Mới</title>
+    <link rel="stylesheet" href="../css/Gioi_thieu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1 style="font-size: 30px; margin: 0">Báo Mới</h1>
-      <div class="logo">
-        <img src="../img/logo.webp" alt="Logo" />
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+      <div class="nav-inner">
+        <a href="./Trang_chu.html" class="logo">
+          <img
+            src="../img/logo.webp"
+            alt="Logo"
+            style="height: 32px; vertical-align: middle; margin-right: 8px"
+          />
+          Báo<span>Mới</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="nav-links" id="navLinks">
+          <a href="./Trang_chu.html">Trang chủ</a>
+          <a href="./Gioi_thieu.html" class="active">Giới thiệu</a>
+          <a href="./Tin_tuc.html">Tin tức</a>
+          <a href="./The_thao.html">Thể thao</a>
+          <a href="./Giai_tri.html">Giải trí</a>
+          <a href="./Lien_he.html">Liên hệ</a>
+          <a href="./FAQ.html">FAQ</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Search -->
+          <div class="search-wrap" id="searchWrap">
+            <button class="icon-btn" id="searchToggle" aria-label="Tìm kiếm">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </button>
+            <div class="search-box" id="searchBox">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Tìm kiếm nội dung..."
+                autocomplete="off"
+              />
+              <button class="search-close" id="searchClose" aria-label="Đóng">
+                ✕
+              </button>
+            </div>
+          </div>
+
+          <!-- Dark mode -->
+          <button
+            class="icon-btn theme-toggle"
+            id="themeToggle"
+            aria-label="Chuyển giao diện"
+          >
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+
+          <!-- Hamburger -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-      <div class="search-box">
-        <input
-          type="text"
-          placeholder="Tìm kiếm..."
-          style="font-size: medium"
-        />
+
+      <!-- Mobile drawer -->
+      <div class="mobile-menu" id="mobileMenu">
+        <nav>
+          <a href="./Trang_chu.html">Trang chủ</a>
+          <a href="./Gioi_thieu.html" class="active">Giới thiệu</a>
+          <a href="./Tin_tuc.html">Tin tức</a>
+          <a href="./The_thao.html">Thể thao</a>
+          <a href="./Giai_tri.html">Giải trí</a>
+          <a href="./Lien_he.html">Liên hệ</a>
+          <a href="./FAQ.html">FAQ</a>
+        </nav>
       </div>
     </header>
-    <nav>
-      <div class="nav-container">
-        <ul>
-          <li><a href="./Trang_chu.html">Trang chủ</a></li>
-          <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
-          <li><a href="./Tin_tuc.html">Tin tức</a></li>
-          <li><a href="./The_thao.html">Thể thao</a></li>
-          <li><a href="./Giai_tri.html">Giải trí</a></li>
-          <li><a href="./Lien_he.html">Liên hệ</a></li>
-          <li><a href="./FAQ.html">FAQ</a></li>
-        </ul>
-      </div>
-    </nav>
 
-    <main>
-      <div class="container">
-        Lorem ipsum dolor sit ametmet consectetur adipisicing elit. At, nam..
+    <!-- Search results overlay -->
+    <div class="search-results-overlay" id="searchResults">
+      <div class="search-results-inner">
+        <p class="sr-label">Kết quả tìm kiếm:</p>
+        <div id="resultsList"></div>
+        <p class="sr-empty" id="srEmpty" hidden>
+          Không tìm thấy kết quả phù hợp.
+        </p>
       </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow">Giới thiệu</p>
+        <h1>Tin tức <em>nhanh chóng</em>,<br />chính xác &amp; đáng tin cậy</h1>
+        <p class="hero-sub">— nơi thông tin gặp gỡ sự trung thực.</p>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <main class="container" id="mainContent">
+      <!-- About intro -->
+      <section
+        class="about-intro section-block"
+        data-search-section="Giới thiệu về chúng tôi nền tảng cung cấp tin tức nhanh chóng chính xác đáng tin cậy xã hội thể thao công nghệ giải trí biên tập viên cộng tác viên kiểm chứng"
+      >
+        <div class="section-label">01 / Giới thiệu</div>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2>Chúng tôi là ai?</h2>
+            <p>
+              <strong>Báo Mới</strong> là nền tảng cung cấp tin tức
+              <strong>nhanh chóng, chính xác và đáng tin cậy</strong>. Chúng tôi
+              hướng đến việc mang lại cho người đọc những thông tin mới nhất
+              trong các lĩnh vực như xã hội, thể thao, công nghệ và giải trí.
+            </p>
+            <p>
+              Với đội ngũ biên tập viên và cộng tác viên giàu kinh nghiệm, chúng
+              tôi cam kết mang đến nội dung chất lượng, được kiểm chứng rõ ràng
+              và cập nhật liên tục.
+            </p>
+          </div>
+          <div class="about-decoration">
+            <div class="deco-card">
+              <span class="deco-num">24/7</span>
+              <span class="deco-text">Cập nhật tin tức</span>
+            </div>
+            <div class="deco-card accent">
+              <span class="deco-num">100%</span>
+              <span class="deco-text">Kiểm chứng nội dung</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission -->
+      <section
+        class="mission section-block"
+        data-search-section="Sứ mệnh thông tin nhanh chóng chính xác minh bạch khách quan trải nghiệm đọc tin tiện lợi người dùng"
+      >
+        <div class="section-label">02 / Sứ mệnh</div>
+        <h2>Sứ mệnh</h2>
+        <div class="mission-list">
+          <div class="mission-item">
+            <div class="mission-icon">⚡</div>
+            <div>
+              <h3>Nhanh &amp; Chính xác</h3>
+              <p>
+                Cung cấp thông tin nhanh chóng và chính xác, không để người đọc
+                chờ đợi.
+              </p>
+            </div>
+          </div>
+          <div class="mission-item">
+            <div class="mission-icon">🔍</div>
+            <div>
+              <h3>Minh bạch</h3>
+              <p>
+                Đảm bảo tính minh bạch và khách quan trong từng bài viết, từng
+                dòng tin.
+              </p>
+            </div>
+          </div>
+          <div class="mission-item">
+            <div class="mission-icon">📱</div>
+            <div>
+              <h3>Tiện lợi</h3>
+              <p>
+                Mang đến trải nghiệm đọc tin tiện lợi, mọi lúc mọi nơi cho người
+                dùng.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision -->
+      <section
+        class="vision section-block"
+        data-search-section="Tầm nhìn nền tảng tin tức hàng đầu tin tưởng người dùng hàng ngày cập nhật thông tin"
+      >
+        <div class="section-label">03 / Tầm nhìn</div>
+        <div class="vision-wrap">
+          <h2>Tầm Nhìn</h2>
+          <blockquote>
+            Báo Mới hướng tới trở thành một trong những nền tảng tin tức hàng
+            đầu, nơi người dùng có thể tin tưởng và sử dụng hàng ngày để cập
+            nhật thông tin.
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section
+        class="values section-block"
+        data-search-section="Giá trị cốt lõi chính xác thông tin kiểm chứng nhanh chóng cập nhật 24/7 khách quan trung thực đa chiều tiện lợi giao diện thân thiện"
+      >
+        <div class="section-label">04 / Giá trị</div>
+        <h2>Giá Trị Cốt Lõi</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">✅</div>
+            <h3>Chính xác</h3>
+            <p>
+              Thông tin được kiểm chứng rõ ràng trước khi đến tay người đọc.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">⏱</div>
+            <h3>Nhanh chóng</h3>
+            <p>
+              Cập nhật tin tức liên tục 24/7, không bỏ lỡ khoảnh khắc quan
+              trọng.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">⚖️</div>
+            <h3>Khách quan</h3>
+            <p>
+              Đưa tin trung thực, đa chiều, tôn trọng sự đa dạng của thông tin.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🖥️</div>
+            <h3>Tiện lợi</h3>
+            <p>
+              Giao diện thân thiện, dễ sử dụng trên mọi thiết bị và nền tảng.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section
+        class="team section-block"
+        data-search-section="Đội ngũ người trẻ năng động đam mê báo chí công nghệ nỗ lực nội dung tốt nhất người đọc"
+      >
+        <div class="section-label">05 / Đội ngũ</div>
+        <h2>Đội Ngũ</h2>
+        <p class="team-desc">
+          Chúng tôi là tập hợp những người trẻ năng động, đam mê báo chí và công
+          nghệ, luôn nỗ lực để mang lại nội dung tốt nhất cho người đọc.
+        </p>
+        <div class="team-avatars">
+          <div class="avatar-item">
+            <div class="avatar">BT</div>
+            <span>Biên Tập</span>
+          </div>
+          <div class="avatar-item">
+            <div class="avatar">PV</div>
+            <span>Phóng Viên</span>
+          </div>
+          <div class="avatar-item">
+            <div class="avatar">KT</div>
+            <span>Kỹ Thuật</span>
+          </div>
+          <div class="avatar-item">
+            <div class="avatar">TK</div>
+            <span>Thiết Kế</span>
+          </div>
+          <div class="avatar-item">
+            <div class="avatar">MK</div>
+            <span>Marketing</span>
+          </div>
+        </div>
+      </section>
     </main>
-    <aside>Lorem ipsum, dolor sit a</aside>
 
-    <footer>
-      <p>&copy; 2023 Báo Mới. All rights reserved.</p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p class="footer-logo">Báo<span>Mới</span></p>
+        <p>&copy; 2026 Báo Mới. Bảo lưu mọi quyền.</p>
+      </div>
     </footer>
+
+    <script src="../javascript/Gioi_thieu.js"></script>
   </body>
 </html>
