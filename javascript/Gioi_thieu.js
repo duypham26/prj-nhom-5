@@ -8,131 +8,93 @@ const qsa = (sel, root = document) => [...root.querySelectorAll(sel)];
    1. HAMBURGER MENU
    ============================================================ */
 const hamburger = qs("#hamburger");
-const mobileMenu = qs("#mobileMenu");
-const navLinks = qs("#navLinks");
+const navMenu = qs("#nav-menu");
 
-hamburger.addEventListener("click", () => {
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation();
   const isOpen = hamburger.classList.toggle("open");
-  mobileMenu.classList.toggle("open", isOpen);
-  hamburger.setAttribute("aria-expanded", isOpen);
+  navMenu.classList.toggle("open", isOpen);
 });
 
-// Close on nav link click (mobile)
-qsa("a", mobileMenu).forEach((link) => {
+// Đóng menu khi click vào link
+qsa("a", navMenu).forEach((link) => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("open");
-    mobileMenu.classList.remove("open");
-    hamburger.setAttribute("aria-expanded", "false");
+    navMenu.classList.remove("open");
   });
 });
 
-// Close on outside click
+// Đóng menu khi click ra ngoài
 document.addEventListener("click", (e) => {
-  if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+  if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
     hamburger.classList.remove("open");
-    mobileMenu.classList.remove("open");
-    hamburger.setAttribute("aria-expanded", "false");
+    navMenu.classList.remove("open");
   }
 });
 
 /* ============================================================
-   2. DARK MODE TOGGLE
+   2. DARK MODE (dùng body.dark — giống thể thao)
    ============================================================ */
-const themeToggle = qs("#themeToggle");
-const root = document.documentElement;
+const switchMode = qs("#switch-mode");
+const icon = switchMode.querySelector("i");
 
-// Restore saved theme
-const savedTheme = localStorage.getItem("newssite-theme");
-if (savedTheme) root.setAttribute("data-theme", savedTheme);
+// Khôi phục trạng thái đã lưu
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  icon.classList.replace("bi-moon-fill", "bi-sun-fill");
+}
 
-themeToggle.addEventListener("click", () => {
-  const isDark = root.getAttribute("data-theme") === "dark";
-  const next = isDark ? "light" : "dark";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("newssite-theme", next);
+switchMode.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.contains("dark");
+  icon.classList.toggle("bi-moon-fill", !isDark);
+  icon.classList.toggle("bi-sun-fill", isDark);
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 /* ============================================================
-   3. SEARCH – open/close panel
+   3. SEARCH — tìm kiếm nội dung trong trang
    ============================================================ */
-const searchToggle = qs("#searchToggle");
-const searchClose = qs("#searchClose");
-const searchBox = qs("#searchBox");
 const searchInput = qs("#searchInput");
-const searchResults = qs("#searchResults");
+const searchBtn = qs("#searchBtn");
 
-function openSearch() {
-  searchBox.classList.add("open");
-  searchInput.focus();
-}
-
-function closeSearch() {
-  searchBox.classList.remove("open");
-  searchResults.classList.remove("open");
-  searchInput.value = "";
-  qs("#resultsList").innerHTML = "";
-  qs("#srEmpty").hidden = true;
-}
-
-searchToggle.addEventListener("click", (e) => {
-  e.stopPropagation();
-  if (searchBox.classList.contains("open")) {
-    closeSearch();
-  } else {
-    openSearch();
-  }
-});
-
-searchClose.addEventListener("click", closeSearch);
-
-// Close on Escape
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeSearch();
-});
-
-// Prevent click inside search box from bubbling to document close
-searchBox.addEventListener("click", (e) => e.stopPropagation());
-
-/* ============================================================
-   4. REAL-TIME SEARCH FILTER
-   ============================================================ */
-
-// Build search index from page sections
+// Xây index từ các section có data-search-section
 const searchIndex = buildIndex();
 
 function buildIndex() {
-  const sections = qsa("[data-search-section]");
-  const index = [];
-
-  // Map section IDs / titles
   const sectionMeta = {
-    "about-intro": { tag: "Giới thiệu", title: "Giới thiệu về NewsSite" },
+    "about-intro": { tag: "Giới thiệu", title: "Giới thiệu về Báo Mới" },
     mission: { tag: "Sứ mệnh", title: "Sứ mệnh của chúng tôi" },
-    vision: { tag: "Tầm nhìn", title: "Tầm nhìn NewsSite" },
+    vision: { tag: "Tầm nhìn", title: "Tầm nhìn Báo Mới" },
     values: { tag: "Giá trị", title: "Giá trị cốt lõi" },
     team: { tag: "Đội ngũ", title: "Đội ngũ biên tập" },
-    contact: { tag: "Liên hệ", title: "Thông tin liên hệ" },
   };
 
-  sections.forEach((el) => {
-    const classList = [...el.classList];
-    const sectionKey = Object.keys(sectionMeta).find((k) =>
-      classList.includes(k),
-    );
-    const meta = sectionMeta[sectionKey] || {
+  return qsa("[data-search-section]").map((el) => {
+    const key = Object.keys(sectionMeta).find((k) => el.classList.contains(k));
+    const meta = sectionMeta[key] || {
       tag: "Mục",
       title: el.querySelector("h2")?.textContent || "",
     };
-
-    index.push({
+    return {
       element: el,
       tag: meta.tag,
       title: meta.title,
       keywords: (el.dataset.searchSection || "").toLowerCase(),
-    });
+    };
   });
+}
 
-  return index;
+// Chuẩn hoá tiếng Việt (bỏ dấu để so sánh)
+function normalize(str) {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function highlight(text, query) {
@@ -141,22 +103,26 @@ function highlight(text, query) {
   return text.replace(regex, '<mark class="search-highlight">$1</mark>');
 }
 
-function escapeRegex(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+// Tạo overlay kết quả
+let overlay = qs("#searchResultsOverlay");
+if (!overlay) {
+  overlay = document.createElement("div");
+  overlay.id = "searchResultsOverlay";
+  overlay.className = "search-results-overlay";
+  overlay.innerHTML = `
+    <div class="search-results-inner">
+      <p class="sr-label">Kết quả tìm kiếm:</p>
+      <div id="resultsList"></div>
+      <p class="sr-empty" id="srEmpty" hidden>Không tìm thấy kết quả phù hợp.</p>
+    </div>`;
+  // Chèn sau <nav>
+  const nav = qs("nav");
+  nav.insertAdjacentElement("afterend", overlay);
 }
 
-// Normalize Vietnamese (simple diacritic-insensitive compare)
-function normalize(str) {
-  return str
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-}
-
-searchInput.addEventListener("input", () => {
+function runSearch() {
   const raw = searchInput.value.trim();
   const query = normalize(raw);
-
   const resultsList = qs("#resultsList");
   const srEmpty = qs("#srEmpty");
 
@@ -164,11 +130,11 @@ searchInput.addEventListener("input", () => {
   srEmpty.hidden = true;
 
   if (!query) {
-    searchResults.classList.remove("open");
+    overlay.classList.remove("open");
     return;
   }
 
-  searchResults.classList.add("open");
+  overlay.classList.add("open");
 
   const matches = searchIndex.filter(
     (item) =>
@@ -189,10 +155,12 @@ searchInput.addEventListener("input", () => {
       <span class="result-item-title">${highlight(item.title, raw)}</span>
     `;
     div.addEventListener("click", () => {
-      closeSearch();
+      overlay.classList.remove("open");
+      searchInput.value = "";
+      resultsList.innerHTML = "";
       item.element.scrollIntoView({ behavior: "smooth", block: "start" });
-      // Brief flash highlight
-      item.element.style.outline = "2px solid var(--clr-accent)";
+      // Flash highlight
+      item.element.style.outline = "2px solid #d32f2f";
       item.element.style.outlineOffset = "8px";
       setTimeout(() => {
         item.element.style.outline = "";
@@ -201,27 +169,36 @@ searchInput.addEventListener("input", () => {
     });
     resultsList.appendChild(div);
   });
+}
+
+searchBtn.addEventListener("click", runSearch);
+
+searchInput.addEventListener("input", runSearch);
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") runSearch();
+  if (e.key === "Escape") {
+    overlay.classList.remove("open");
+    searchInput.value = "";
+  }
 });
 
-// Close search results when clicking outside
+// Đóng overlay khi click ra ngoài
 document.addEventListener("click", (e) => {
-  if (
-    !searchResults.contains(e.target) &&
-    !qs("#searchWrap").contains(e.target)
-  ) {
-    searchResults.classList.remove("open");
+  if (!overlay.contains(e.target) && !qs("header").contains(e.target)) {
+    overlay.classList.remove("open");
   }
 });
 
 /* ============================================================
-   5. SCROLL-TRIGGERED SECTION ANIMATIONS
+   4. SCROLL-TRIGGERED SECTION ANIMATIONS
    ============================================================ */
-const observer = new IntersectionObserver(
+const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+        sectionObserver.unobserve(entry.target);
       }
     });
   },
@@ -230,5 +207,5 @@ const observer = new IntersectionObserver(
 
 qsa(".section-block").forEach((el, i) => {
   el.style.transitionDelay = `${i * 0.05}s`;
-  observer.observe(el);
+  sectionObserver.observe(el);
 });
