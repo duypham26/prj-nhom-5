@@ -1,48 +1,162 @@
 <!doctype html>
 <html lang="vi">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styleprj.css" />
-    <title>Báo Mới</title>
-  </head>
-  <body>
-    <header>
-      <h1 style="font-size: 30px; margin: 0">Báo Mới</h1>
-      <div class="logo">
-        <img src="../img/logo.webp" alt="Logo" />
-      </div>
-      <div class="search-box">
-        <input
-          type="text"
-          placeholder="Tìm kiếm..."
-          style="font-size: medium"
-        />
-      </div>
-    </header>
-    <nav>
-      <div class="nav-container">
-        <ul>
-          <li><a href="./Trang_chu.html">Trang chủ</a></li>
-          <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
-          <li><a href="./Tin_tuc.html">Tin tức</a></li>
-          <li><a href="./The_thao.html">Thể thao</a></li>
-          <li><a href="./Giai_tri.html">Giải trí</a></li>
-          <li><a href="./Lien_he.html">Liên hệ</a></li>
-          <li><a href="./FAQ.html">FAQ</a></li>
-        </ul>
-      </div>
-    </nav>
+    <link rel="stylesheet" href="../css/The_thao.css" />
+    <title>Thể thao - Báo Mới</title>
+</head>
 
-    <main>
-      <div class="container">
-        Lorem ipsum dolor sit ametmet consectetur adipisicing elit. At, nam..
-      </div>
-    </main>
-    <aside>Lorem ipsum, dolor sit a</aside>
+<body class="">
 
-    <footer>
-      <p>&copy; 2023 Báo Mới. All rights reserved.</p>
-    </footer>
-  </body>
+    <!-- WRAPPER -->
+    <div class="wrapper">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Báo Mới</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button class="ntbutton">Find</button>
+            </div>
+            <div class="logo">
+                <img src="../img/logo.webp" alt="Logo" />
+            </div>
+        </header>
+
+        <!-- NAV -->
+        <nav>
+            <div class="nav-container">
+                <!-- node hamburger, only hide in mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="./Trang_chu.html">Trang chủ</a></li>
+                    <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
+                    <li><a href="./Tin_tuc.html">Tin tức</a></li>
+                    <li><a href="./The_thao.html" class="active">Thể thao</a></li>
+                    <li><a href="./Giai_tri.html">Giải trí</a></li>
+                    <li><a href="./Lien_he.html">Liên hệ</a></li>
+                    <li><a href="./FAQ.html">FAQ</a></li>
+                </ul>
+
+                <button id="switch-mode">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- PAGE CONTENT -->
+        <div class="page-wrapper">
+            <main>
+                <!-- tittle-->
+                <div class="category-header">
+                    <h1>Giải trí</h1>
+                </div>
+
+                <div class="hero">
+                    <img src="../img/Gt_1.png" alt="Gt_1">
+                    <div class="hero-content">
+                        <a href="http://www.lethieunhon.vn/2019/12/chuc-nang-giai-tri-ang-bi-lam-dung-va.html#google_vignette"
+                            class="news-link">
+                            <h3>Giải trí lành mạnh</h3>
+                        </a>
+                        <p>Xu hướng giải trí ngày càng tăng trong những năm gần đây.</p>
+                        <div class="hero-meta">
+                            <span>Báo giải trí</span>
+                            <span>•</span>
+                            <span>21/04/2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-grid-2col">
+                    <div class="news-card-medium">
+                        <a href="https://vnexpress.net/cong-vien-giai-tri-viet-bat-kip-xu-huong-the-gioi-4498055.html"
+                            class="news-link">
+                            <img src="../img/Gt_2.png" alt="Gt_2">
+                            <h3>Công viên, bắt kịp xu hướng giải trí thế giới</h3>
+                        </a>
+                        <span class="comment-badge">💬</span>
+                    </div>
+                    <div class="news-card-medium">
+                        <a href="https://vietnamnet.vn/giai-tri-truc-tuyen-bung-no-tang-truong-vuot-bac-nho-dai-dich-i402014.html"
+                            class="news-link">
+                            <img src="../img/Gt_3.png" alt="Gt_3">
+                            <h3>Giải trí trực tuyến bùng nổ</h3>
+                        </a>
+                        <span class="comment-badge">💬 </span>
+                    </div>
+                </div>
+
+                <div class="news-grid-4col">
+                    <div class="news-card-small">
+                        <a href="https://laodong.vn/du-lich/kham-pha/cong-vien-giai-tri-o-viet-nam-khong-con-la-thu-choi-xa-xi-1078310.html"
+                            class="news-link">
+                            <img src="../img/gt_4.png" alt="gt_4">
+                            <h4>Bà nà hill, sức hút đặc biệt của Việt Nam</h4>
+                        </a>
+                    </div>
+                    <div class="news-card-small">
+                        <a href="https://seocamket.com/xu-huong-giai-tri-hien-nay/" class="news-link">
+                            <img src="../img/Gt_5.png" alt="Gt_5">
+                            <h4>Xu hướng giải trí hiện nay.</h4>
+                        </a>
+                    </div>
+                    <div class="news-card-small">
+                        <a href="https://www.youtube.com/channel/UCruaM4824Rr_ry7fsD5Jwag"
+                            class=" news-link">
+                            <img src="../img/Gt_6.png" alt="Gt_6">
+                            <h4>Truyền hình Vĩnh Long, nhà đài mạnh mẽ về giải trí Việt Nam </h4>
+                        </a>
+                    </div>
+                    <div class="news-card-small">
+                        <a href="https://vnexpress.net/da-u-a-n-michael-jackson-qua-60-nam-3800862.html"
+                            class="news-link">
+                            <img src="../img/Gt_7.png" alt="Gt_7">
+                            <h4>Ông hoàng nhạc pop_ Giải trí ca nhạc.</h4>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Báo Mới</h4>
+                    <p>Cập nhật tin tức nhanh nhất, chính xác nhất 24/7.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Danh mục</h4>
+                    <ul>
+                        <li><a href="Trang_chu.html">Trang chủ</a></li>
+                        <li><a href="Tin_tuc.html">Tin tức</a></li>
+                        <li><a href="The_thao.html">Thể thao</a></li>
+                        <li><a href="Giai_tri.html">Giải trí</a></li>
+                        <!-- <li><a href="FAQ.html">FAQ</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <p>Email: info@baomoi.vn<br>Hotline: 1900 1234</p>
+                    <div class="social">FB | YT | TW</div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Báo Mới. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="../javascript/prj.js"></script>
+    <script src="../javascript/light_dark_mode.js"></script>
+    <script src="../javascript/menu_hide_show.js"></script>
+    <script src="../javascript/search_filter.js"></script>
+</body>
+
 </html>
