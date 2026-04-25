@@ -286,63 +286,8 @@ nav {
     font-weight: 500;
 }
 
-/* ================== FOOTER  ================== */
-footer {
-    background: #111;
-    color: #ddd;
-    padding:10px 20px 10px;
-    margin-top: auto;           /* push footer to bottom */
-    border-top: 3px solid #d32f2f;
-}
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.footer-col h3,
-.footer-col h4 {
-    color: #d32f2f;
-    margin-bottom: 12px;
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: 5px;
-}
-
-.footer-col a {
-    text-decoration: none;
-    color: #ddd;
-}
-
-.footer-col a:hover {
-    color: #ff5252;
-}
-
-.social {
-    margin-top: 10px;
-}
-
-/* .social span {
-    margin-right: 15px;
-    cursor: pointer;
-} */
-
-.copyright {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 15px;
-    border-top: 1px solid #333;
-    color: #aaa;
-    font-size: 14px;
-}
 /* css cho dark mode */
 body.dark {
     background: #121212;
