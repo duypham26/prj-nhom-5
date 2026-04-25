@@ -5,208 +5,280 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/styleprj.css" />
     <link rel="stylesheet" href="../css/trang_chu.css" />
-    <link rel="stylesheet" href="../javascript/prj.js" />
-    <title>Báo Mới</title>
+    <link rel="stylesheet" href="../css/font.css" />
+    <title>Trang chủ - Báo Mới</title>
   </head>
   <body>
-    <header>
-      <h1 style="font-size: 30px; margin: 0">Báo Mới</h1>
-      <div class="logo">
-        <img src="../img/logo.webp" alt="Logo" />
-      </div>
-      <div class="search-box">
-        <input
-          type="text"
-          placeholder="Tìm kiếm..."
-          style="font-size: medium"
-        />
-      </div>
-    </header>
-    <nav>
-      <button class="menu-toggle">☰</button>
-      <div class="nav-container">
-        <ul id ="main_menu">
-          <li><a href="./Trang_chu.html" class="active">Trang chủ</a></li>
-          <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
-          <li><a href="./Tin_tuc.html">Tin tức</a></li>
-          <li><a href="./The_thao.html">Thể thao</a></li>
-          <li><a href="./Giai_tri.html">Giải trí</a></li>
-          <li><a href="./Lien_he.html">Liên hệ</a></li>
-          <li><a href="./FAQ.html">FAQ</a></li>
-        </ul>
-      </div>
-    </nav>
-    <main>
-      <div class="container">
-        <article class="featured-top">
-          <div class="featured_img">
-          <img src="../img/tinhot.jpg" alt="Tin hot" />
-          </div>
-          <h2 class="featured-title">
-            Trình Quốc hội bỏ ngưỡng doanh thu chịu thuế 500 triệu đồng với hộ
-            kinh doanh
-          </h2>
-          </div>
-        </article>
-        <div class="sub-featured-grid">
+    <div class="wrapper">
+      <header>
+        <h1>Báo Mới</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button class="ntbutton">Find</button>
+        </div>
+        <div class="logo">
+          <img src="../img/logo.webp" alt="Logo" />
+        </div>
+      </header>
+
+      <nav>
+        <div class="nav-container">
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="./Trang_chu.html" class="active">Trang chủ</a></li>
+            <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
+            <li><a href="./Tin_tuc.html">Tin tức</a></li>
+            <li><a href="./The_thao.html">Thể thao</a></li>
+            <li><a href="./Giai_tri.html">Giải trí</a></li>
+            <li><a href="./Lien_he.html">Liên hệ</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
+          </ul>
+
+          <button id="switch-mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+        </div>
+      </nav>
+      <div class="page-wrapper">
+        <div class="layout-trang-chu">
+          <main>
+            <div class="container">
+              <article class="featured-top">
+                <div class="featured_img">
+                  <img src="../img/tinhot.jpg" alt="Tin hot" />
+                </div>
+                <h2 class="featured-title">
+                  Trình Quốc hội bỏ ngưỡng doanh thu chịu thuế 500 triệu đồng
+                  với hộ kinh doanh
+                </h2>
+              </article>
+
+              <div class="sub-featured-grid">
                 <article class="sub-item">
                   <div class="sub_img">
-                    <img src="../img/tinphu1.jpg" alt="Tin phụ">
+                    <img src="../img/tinphu1.jpg" alt="Tin phụ" />
                   </div>
-                    <h4>Người dẫn đường kể lại hành trình tìm thấy nam sinh lạc rừng Tam Đảo</h4>
-                </article>
-                
-                <article class="sub-item">
-                    <div class="sub_img">
-                    <img src="../img/tinphu2.jpg" alt="Tin phụ">
-                    </div>
-                    <h4>Dấu ấn bền bỉ của Tim Cook sau 15 năm lèo lái Apple</h4>
+                  <h4>
+                    Người dẫn đường kể lại hành trình tìm thấy nam sinh lạc rừng
+                    Tam Đảo
+                  </h4>
                 </article>
 
                 <article class="sub-item">
-                    <div class="sub_img">
-                    <img src="../img/tinphu3.jpg" alt="Tin phụ">
-                    </div>
-                    <h4>Đưa sân bay Long thành vào khai thác trong năm 2026 là nhiệm vụ bắt buộc</h4>
+                  <div class="sub_img">
+                    <img src="../img/tinphu2.jpg" alt="Tin phụ" />
+                  </div>
+                  <h4>Dấu ấn bền bỉ của Tim Cook sau 15 năm lèo lái Apple</h4>
                 </article>
+
+                <article class="sub-item">
+                  <div class="sub_img">
+                    <img src="../img/tinphu3.jpg" alt="Tin phụ" />
+                  </div>
+                  <h4>
+                    Đưa sân bay Long thành vào khai thác trong năm 2026 là nhiệm
+                    vụ bắt buộc
+                  </h4>
+                </article>
+              </div>
+
+              <hr style="margin: 20px 0" />
+
+              <div class="list_news">
+                <article class="news_item">
+                  <div class="news_img">
+                    <img src="../img/tinphu4.jpg" alt="Tin phụ" />
+                  </div>
+                  <div class="news_items_content">
+                    <h4>
+                      Công an Đắk Lắk khẳng định chưa có thông tin chính thức vụ
+                      tai nạn khiến nam sinh lớp 12 tử vong
+                    </h4>
+                    <p class="meta">Tin tức • 36 phút • 10 liên quan</p>
+                  </div>
+                </article>
+
+                <article class="news_item">
+                  <div class="news_img">
+                    <img src="../img/tinphu5.jpg" alt="Tin phụ" />
+                  </div>
+                  <div class="news_items_content">
+                    <h4>
+                      Cảnh giác trước chiêu trò luyện chứng chi IELTS, TOEFL:
+                      Bài 1 - 'Ma trận' các trung tâm luyện chứng chỉ
+                    </h4>
+                    <p class="meta">Tin tức • 1 giờ • 15 liên quan</p>
+                  </div>
+                </article>
+
+                <article class="news_item">
+                  <div class="news_img">
+                    <img src="../img/tinphu6.jpg" alt="Tin phụ" />
+                  </div>
+                  <div class="news_items_content">
+                    <h4>
+                      Đề xuất cho doanh nghiệp vay vàng trong dân để gỡ nút vốn
+                      ngành trang sức
+                    </h4>
+                    <p class="meta">Tin tức • 2 giờ • 20 liên quan</p>
+                  </div>
+                </article>
+
+                <article class="news_item">
+                  <div class="news_img">
+                    <img src="../img/tinphu7.jpg" alt="Tin phụ" />
+                  </div>
+                  <div class="news_items_content">
+                    <h4>
+                      Ford Mustang GTD Competition lập kỷ lục mới tại
+                      Nurburgring
+                    </h4>
+                    <p class="meta">Tin tức • 3 giờ • 25 liên quan</p>
+                  </div>
+                </article>
+
+                <article class="news_item">
+                  <div class="news_img">
+                    <img src="../img/tinphu8.jpg" alt="Tin phụ" />
+                  </div>
+                  <div class="news_items_content">
+                    <h4>
+                      Dự kiến nâng ngưỡng chịu thuế hộ kinh doanh lên mức 1 tỷ
+                      đồng
+                    </h4>
+                    <p class="meta">Tin tức • 4 giờ • 30 liên quan</p>
+                  </div>
+                </article>
+
+                <article class="news_item">
+                  <div class="news_img">
+                    <img src="../img/tinphu9.jpg" alt="Tin phụ" />
+                  </div>
+                  <div class="news_items_content">
+                    <h4>
+                      Tổng thống Trump và MXH nói ông Obama 'cho' Iran 1,7 tỷ
+                      USD, chuyển tiền mặt giữa đêm: Sự thật quá bất ngờ
+                    </h4>
+                    <p class="meta">Tin tức • 5 giờ • 35 liên quan</p>
+                  </div>
+                </article>
+              </div>
             </div>
-            <hr style="margin: 20px 0" />
-          <div class="list_news">
-            <article class="news_item">
-              <div class="news_img">
-                <img src="../img/tinphu4.jpg" alt="Tin phụ">
-              </div>
-              <div class="news_items_content">
-                <h4>Công an Đắk Lắk khẳng định chưa có thông tin chính thức vụ tai nạn khiến nam sinh lớp 12 tử vong</h4>
-                <p class="meta">Tin tức • 36 phút • 10 liên quan</p>
-              </div>
-            </article>
+          </main>
 
-            <article class="news_item">
-              <div class="news_img">
-                <img src="../img/tinphu5.jpg" alt="Tin phụ">
-              </div>
-              <div class="news_items_content">
-                <h4>Cảnh giác trước chiêu trò luyện chứng chi IELTS, TOEFL: Bài 1 - 'Ma trận' các trung tâm luyện chứng chỉ</h4>
-                <p class="meta">Tin tức • 1 giờ • 15 liên quan</p>
-              </div>
-            </article>
+          <aside>
+            <div class="news_trending">
+              <h1>Tin nỗi bật tháng 4/2026</h1>
 
-            <article class="news_item">
-              <div class="news_img">
-                <img src="../img/tinphu6.jpg" alt="Tin phụ">
-              </div>
-              <div class="news_items_content">
-                <h4>Đề xuất cho doanh nghiệp vay vàng trong dân để gỡ nút vốn ngành trang sức</h4>
-                <p class="meta">Tin tức • 2 giờ • 20 liên quan</p>
-              </div>
-            </article>
+              <article class="news_trending_item">
+                <h2>Giá xăng dầu giảm mạnh từ 16h ngày 21/4</h2>
+                <div class="row_content">
+                  <div class="news_trending_img">
+                    <img src="../img/tinnoibat1.jpg" alt="Tin nổi bật" />
+                  </div>
+                  <h4>
+                    Từ 16h ngày 21/4, giá xăng dầu cùng giảm 660-3.190 đồng một
+                    lít, kg, tùy mặt hàng.
+                  </h4>
+                </div>
+              </article>
 
-             <article class="news_item">
-              <div class="news_img">
-                <img src="../img/tinphu7.jpg" alt="Tin phụ">
-              </div>
-              <div class="news_items_content">
-                <h4>Ford Mustang GTD Competition lập kỷ lục mới tại Nurburgring</h4>
-                <p class="meta">Tin tức • 3 giờ • 25 liên quan</p>
-              </div>
-            </article>
+              <article class="news_trending_item">
+                <h2>
+                  Những người đẫn đường kể lại hành trình tìm thấy nam sinh lạc
+                  rừng Tam Đảo
+                </h2>
+                <div class="row_content">
+                  <div class="news_trending_img">
+                    <img src="../img/tinnoibat2.jpg" alt="Tin nổi bật" />
+                  </div>
+                  <h4>
+                    Trải qua 37 giờ mất liên lạc trong rừng sâu Tam Đảo, cầm cự
+                    bằng nước suối, bánh chocopie, Nguyễn Tuấn Anh, 19 tuổi, vẫn
+                    tự tin tìm được đường ra.
+                  </h4>
+                </div>
+              </article>
 
-             <article class="news_item">
-              <div class="news_img">
-                <img src="../img/tinphu8.jpg" alt="Tin phụ">
-              </div>
-              <div class="news_items_content">
-                <h4>Dự kiến nâng ngưỡng chịu thuế hộ kinh doanh lên mức 1 tỷ đồng</h4>
-                <p class="meta">Tin tức • 4 giờ • 30 liên quan</p>
-              </div>
-            </article>
+              <article class="news_trending_item">
+                <h2>
+                  Những tuyên bố liên tục thay đổi của Mỹ về đàm phán với Iran
+                </h2>
+                <div class="row_content">
+                  <div class="news_trending_img">
+                    <img src="../img/tinnoibat3.jpg" alt="Tin nổi bật" />
+                  </div>
+                  <h4>
+                    Các phát biểu từ Tổng thống Trump về đàm phán với Iran đang
+                    gây bối rối, có thể khiến tiến trình ngoại giao khó đạt đột
+                    phá hơn.
+                  </h4>
+                </div>
+              </article>
 
-            <article class="news_item">
-              <div class="news_img">
-                <img src="../img/tinphu9.jpg" alt="Tin phụ">
-              </div>
-              <div class="news_items_content">
-                <h4>Tổng thống Trump và MXH nói ông Obama 'cho' Iran 1,7 tỷ USD, chuyển tiền mặt giữa đêm: Sự thật quá bất ngờ</h4>
-                <p class="meta">Tin tức • 5 giờ • 35 liên quan</p>
-              </div> 
-            </article>
+              <article class="news_trending_item">
+                <h2>Arsenal vẫn còn 73% cơ hội vô địch Ngoại hạng Anh</h2>
+                <div class="row_content">
+                  <div class="news_trending_img">
+                    <img src="../img/tinnoibat4.jpg" alt="Tin nổi bật" />
+                  </div>
+                  <h4>
+                    ANH - Dù thua Man City ở vòng 33, Arsenal, vẫn nắm lợi thế
+                    trong cuộc đua vô địch Ngoại hạng Anh mùa này, theo dự đoán
+                    từ siêu máy tính Opta.
+                  </h4>
+                </div>
+              </article>
+
+              <article class="news_trending_item">
+                <h2>Tác giả viết sách chữa lành nhờ 'Trò chuyện cùng AI'</h2>
+                <div class="row_content">
+                  <div class="news_trending_img">
+                    <img src="../img/tinnoibat5.jpg" alt="Tin nổi bật" />
+                  </div>
+                  <h4>
+                    Cây bút Christy Nguyen cho biết viết cuốn "Chữa lành cùng
+                    AI" sau hơn 4.000 giờ trò chuyện cùng các ứng dụng trí tuệ
+                    nhân tạo.
+                  </h4>
+                </div>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>Báo Mới</h3>
+            <p>Cập nhật tin tức nhanh nhất, chính xác nhất 24/7.</p>
           </div>
-      </div>
-    </main>
-    <aside>
-      <div class="news_trending">
-      <h1>Tin nỗi bật tháng 4/2026</h1>
-      <article class="news_trending_item">
-        <h2>Giá xăng dầu giảm mạnh từ 16h ngày 21/4</h2>
-        <div class = "row_content">
-        <div class="news_trending_img">
-          <img src="../img/tinnoibat1.jpg" alt="Tin nổi bật">
+          <div class="footer-col">
+            <h4>Danh mục</h4>
+            <ul>
+              <li><a href="Trang_chu.html">Trang chủ</a></li>
+              <li><a href="Tin_tuc.html">Tin tức</a></li>
+              <li><a href="The_thao.html">Thể thao</a></li>
+              <li><a href="Giai_tri.html">Giải trí</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Liên hệ</h4>
+            <p>Email: info@baomoi.vn<br />Hotline: 1900 1234</p>
+            <div class="social">FB | YT | TW</div>
+          </div>
         </div>
-        <h4>Từ 16h ngày 21/4, giá xăng dầu cùng giảm 660-3.190 đồng một lít, kg, tùy mặt hàng.</h4>
-      </div>
-      </article>
-
-      <article class="news_trending_item">
-        <h2>Những người đẫn đường kể lại hành trình tìm thấy nam sinh lạc rừng Tam Đảo</h2>
-        <div class = "row_content">
-        <div class="news_trending_img">
-          <img src="../img/tinnoibat2.jpg" alt="Tin nổi bật">
-        </div>
-        <h4>Trải qua 37 giờ mất liên lạc trong rừng sâu Tam Đảo, cầm cự bằng nước suối, bánh chocopie, Nguyễn Tuấn Anh, 19 tuổi, vẫn tự tin tìm được đường ra.</h4>
-      </div>
-      </article>
-
-      <article class="news_trending_item">
-        <h2>Những tuyên bố liên tục thay đổi của Mỹ về đàm phán với Iran</h2>
-        <div class = "row_content">
-        <div class="news_trending_img">
-          <img src="../img/tinnoibat3.jpg" alt="Tin nổi bật">
-        </div>
-        <h4>Các phát biểu từ Tổng thống Trump về đàm phán với Iran đang gây bối rối, có thể khiến tiến trình ngoại giao khó đạt đột phá hơn.</h4>
-      </div>
-      </article>
-
-      <article class="news_trending_item">
-        <h2>Arsenal vẫn còn 73% cơ hội vô địch Ngoại hạng Anh</h2>
-        <div class = "row_content">
-        <div class="news_trending_img">
-          <img src="../img/tinnoibat4.jpg" alt="Tin nổi bật">
-        </div>
-        <h4>ANH - Dù thua Man City ở vòng 33, Arsenal, vẫn nắm lợi thế trong cuộc đua vô địch Ngoại hạng Anh mùa này, theo dự đoán từ siêu máy tính Opta.</h4>
-      </div>
-      </article>
-
-       <article class="news_trending_item">
-        <h2>Tác giả viết sách chữa lành nhờ 'Trò chuyện cùng AI' </h2>
-        <div class = "row_content">
-        <div class="news_trending_img">
-          <img src="../img/tinnoibat5.jpg" alt="Tin nổi bật">
-        </div>
-        <h4>Cây bút Christy Nguyen cho biết viết cuốn "Chữa lành cùng AI" sau hơn 4.000 giờ trò chuyện cùng các ứng dụng trí tuệ nhân tạo.</h4>
-      </div>
-      </article>
-      </div>
-    </aside>
-
-    <footer>
-      <p>&copy; 2023 Báo Mới. All rights reserved.</p>
-    </footer>
-    <script>
-  const menuBtn = document.querySelector('.menu-toggle');
-  const mainMenu = document.getElementById('main_menu');
-
-  menuBtn.addEventListener('click', function() {
-    // Bật tắt class 'active' để ẩn/hiện menu
-    mainMenu.classList.toggle('active');
-
-    // Kiểm tra nếu đang hiện thì đổi icon thành X, ngược lại thành ☰
-    if (mainMenu.classList.contains('active')) {
-      menuBtn.innerHTML = '✕';
-    } else {
-      menuBtn.innerHTML = '☰';
-    }
-  });
-</script>
+        <p class="copyright">&copy; 2026 Báo Mới. All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="../javascript/prj.js"></script>
+    <script src="../javascript/light_dark_mode.js"></script>
+    <script src="../javascript/menu_hide_show.js"></script>
+    <script src="../javascript/search_filter.js"></script>
   </body>
 </html>
