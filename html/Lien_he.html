@@ -7,42 +7,83 @@
     <title>Báo Mới</title>
   </head>
   <body>
-    <header>
-      <h1 style="font-size: 30px; margin: 0">Báo Mới</h1>
-      <div class="logo">
-        <img src="../img/logo.webp" alt="Logo" />
-      </div>
-      <div class="search-box">
-        <input
-          type="text"
-          placeholder="Tìm kiếm..."
-          style="font-size: medium"
-        />
-      </div>
-    </header>
-    <nav>
-      <div class="nav-container">
-        <ul>
-          <li><a href="./Trang_chu.html">Trang chủ</a></li>
-          <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
-          <li><a href="./Tin_tuc.html">Tin tức</a></li>
-          <li><a href="./The_thao.html">Thể thao</a></li>
-          <li><a href="./Giai_tri.html">Giải trí</a></li>
-          <li><a href="./Lien_he.html">Liên hệ</a></li>
-          <li><a href="./FAQ.html">FAQ</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- WRAPPER -->
+    <div class="wrapper">
+      <!-- HEADER -->
+      <header>
+        <h1>Báo Mới</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button class="ntbutton">Find</button>
+        </div>
+        <div class="logo">
+          <img src="../img/logo.webp" alt="Logo" />
+        </div>
+      </header>
 
-    <main>
-      <div class="container">
-        Lorem ipsum dolor sit ametmet consectetur adipisicing elit. At, nam..
-      </div>
-    </main>
-    <aside>Lorem ipsum, dolor sit a</aside>
+      <!-- NAV -->
+      <nav>
+        <div class="nav-container">
+          <!-- node hamburger, only hide in mobile -->
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-    <footer>
-      <p>&copy; 2023 Báo Mới. All rights reserved.</p>
-    </footer>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="./Trang_chu.html">Trang chủ</a></li>
+            <li><a href="./Gioi_thieu.html">Giới thiệu</a></li>
+            <li><a href="./Tin_tuc.html">Tin tức</a></li>
+            <li><a href="./The_thao.html">Thể thao</a></li>
+            <li><a href="./Giai_tri.html">Giải trí</a></li>
+            <li><a href="./Lien_he.html" class="active">Liên hệ</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
+          </ul>
+
+          <button id="switch-mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+        </div>
+      </nav>
+
+      <main>
+        <div class="container">
+          Lorem ipsum dolor sit ametmet consectetur adipisicing elit. At, nam..
+        </div>
+      </main>
+      <aside>Lorem ipsum, dolor sit a</aside>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>Báo Mới</h3>
+            <p>Cập nhật tin tức nhanh nhất, chính xác nhất 24/7.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Danh mục</h4>
+            <ul>
+              <li><a href="Trang_chu.html">Trang chủ</a></li>
+              <li><a href="Tin_tuc.html">Tin tức</a></li>
+              <li><a href="The_thao.html">Thể thao</a></li>
+              <li><a href="Giai_tri.html">Giải trí</a></li>
+              <!-- <li><a href="FAQ.html">FAQ</a></li> -->
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Liên hệ</h4>
+            <p>Email: info@baomoi.vn<br />Hotline: 1900 1234</p>
+            <div class="social">FB | YT | TW</div>
+          </div>
+        </div>
+        <p class="copyright">&copy; 2026 Báo Mới. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="../javascript/prj.js"></script>
+    <script src="../javascript/light_dark_mode.js"></script>
+    <script src="../javascript/menu_hide_show.js"></script>
+    <script src="../javascript/search_filter.js"></script>
   </body>
 </html>
