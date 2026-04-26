@@ -1,0 +1,38 @@
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Playfair Display", serif;
+}
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container ul li {
+  margin-bottom: 10px;
+}
+.container ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 12px;
+  width: fit-content;
+  display: block;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.container ul li a:hover {
+  color: #d32f2f;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.letter-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
