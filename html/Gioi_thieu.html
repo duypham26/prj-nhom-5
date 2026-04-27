@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giới Thiệu - Báo Mới</title>
-    <link rel="stylesheet" href="../css/Gioi_thieu.css" />
     <link rel="stylesheet" href="../css/styleprj.css" />
+    <link rel="stylesheet" href="../css/Gioi_thieu.css" />
+    <link rel="stylesheet" href="../css/font.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -19,10 +20,7 @@
   </head>
 
   <body>
-    <!-- .wrapper -->
     <div class="wrapper">
-
-      <!-- ===== HEADER ===== -->
       <header>
         <h1>Báo Mới</h1>
         <div class="search-box">
@@ -34,10 +32,9 @@
         </div>
       </header>
 
-      <!-- ===== NAV ===== -->
       <nav>
         <div class="nav-container">
-          <button class="hamburger" id="hamburger">
+          <button class="hamburger" id="hamburger" aria-label="Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -54,76 +51,99 @@
           </ul>
 
           <button id="switch-mode">
-            <i class="bi bi-moon-fill"></i>
+            <i class="bi bi-moon-stars-fill"></i>
           </button>
         </div>
       </nav>
 
-      <div id="resultsList"></div>
-
-      <!-- ===== HERO ===== -->
       <section class="hero">
         <div class="hero-bg"></div>
         <div class="container hero-content">
           <p class="hero-eyebrow">Giới thiệu</p>
-          <h1>Tin tức <em>nhanh chóng</em>,<br />chính xác &amp; đáng tin cậy</h1>
+          <h1>
+            Tin tức <em>nhanh chóng</em>,<br />chính xác &amp; đáng tin cậy
+          </h1>
           <p class="hero-sub">— nơi thông tin gặp gỡ sự trung thực.</p>
         </div>
       </section>
 
-      <!-- ===== MAIN CONTENT ===== -->
       <main class="container" id="mainContent">
-
-        <!-- 01 · Đội ngũ -->
-        <section
-          class="team section-block"
-          data-search-section="Đội ngũ người trẻ năng động đam mê báo chí công nghệ nỗ lực nội dung tốt nhất người đọc"
-        >
+        <section class="team section-block">
           <div class="section-label">01 / Đội ngũ</div>
           <h2>Đội Ngũ</h2>
           <p class="team-desc">
-            Chúng tôi là tập hợp những người trẻ năng động, đam mê báo chí và công
-            nghệ, luôn nỗ lực để mang lại nội dung tốt nhất cho người đọc.
+            Chúng tôi là tập hợp những người trẻ năng động, đam mê báo chí và
+            công nghệ, luôn nỗ lực để mang lại nội dung tốt nhất cho người đọc.
           </p>
           <div class="team-avatars">
             <div class="avatar-item">
               <div class="avatar">
-                <img src="../img/Avatar_GiaBao.png" alt="Gia Bảo" class="avatar-img" onerror="this.style.display='none'" />
+                <img
+                  src="../img/Avatar_GiaBao.png"
+                  alt="Gia Bảo"
+                  class="avatar-img"
+                  onerror="this.style.display = 'none'"
+                />
                 <span class="avatar-initials">NB</span>
               </div>
               <span class="avatar-name">Nguyễn Trương Gia Bảo</span>
             </div>
             <div class="avatar-item">
               <div class="avatar">
-                <img src="../img/Avatar_DangDuy.png" alt="Đăng Duy" class="avatar-img" onerror="this.style.display='none'" />
+                <img
+                  src="../img/Avatar_DangDuy.png"
+                  alt="Đăng Duy"
+                  class="avatar-img"
+                  onerror="this.style.display = 'none'"
+                />
                 <span class="avatar-initials">PD</span>
               </div>
               <span class="avatar-name">Phạm Đăng Duy</span>
             </div>
             <div class="avatar-item">
               <div class="avatar">
-                <img src="../img/Avatar_VanKham.png" alt="Văn Khâm" class="avatar-img" onerror="this.style.display='none'" />
+                <img
+                  src="../img/Avatar_VanKham.png"
+                  alt="Văn Khâm"
+                  class="avatar-img"
+                  onerror="this.style.display = 'none'"
+                />
                 <span class="avatar-initials">NK</span>
               </div>
               <span class="avatar-name">Nguyễn Văn Khâm</span>
             </div>
             <div class="avatar-item">
               <div class="avatar">
-                <img src="../img/Avatar_VietNhat.png" alt="Việt Nhật" class="avatar-img" onerror="this.style.display='none'" />
+                <img
+                  src="../img/Avatar_VietNhat.png"
+                  alt="Việt Nhật"
+                  class="avatar-img"
+                  onerror="this.style.display = 'none'"
+                />
                 <span class="avatar-initials">NN</span>
               </div>
               <span class="avatar-name">Nguyễn Đình Việt Nhật</span>
             </div>
             <div class="avatar-item">
               <div class="avatar">
-                <img src="../img/Avatar_MinhThai.png" alt="Minh Thái" class="avatar-img" onerror="this.style.display='none'" />
+                <img
+                  src="../img/Avatar_MinhThai.png"
+                  alt="Minh Thái"
+                  class="avatar-img"
+                  onerror="this.style.display = 'none'"
+                />
                 <span class="avatar-initials">PT</span>
               </div>
               <span class="avatar-name">Phạm Minh Thái</span>
             </div>
             <div class="avatar-item">
               <div class="avatar">
-                <img src="../img/Avatar-MinhTrinh.png" alt="Minh Trinh" class="avatar-img" onerror="this.style.display='none'" />
+                <img
+                  src="../img/Avatar-MinhTrinh.png"
+                  alt="Minh Trinh"
+                  class="avatar-img"
+                  onerror="this.style.display = 'none'"
+                />
                 <span class="avatar-initials">HT</span>
               </div>
               <span class="avatar-name">Hoàng Đinh Minh Trinh</span>
@@ -131,25 +151,22 @@
           </div>
         </section>
 
-        <!-- 02 · Giới thiệu -->
-        <section
-          class="about-intro section-block"
-          data-search-section="Giới thiệu về chúng tôi nền tảng cung cấp tin tức nhanh chóng chính xác đáng tin cậy xã hội thể thao công nghệ giải trí biên tập viên cộng tác viên kiểm chứng"
-        >
+        <section class="about-intro section-block">
           <div class="section-label">02 / Giới thiệu</div>
           <div class="about-grid">
             <div class="about-text">
               <h2>Chúng tôi là ai?</h2>
               <p>
                 <strong>Báo Mới</strong> là nền tảng cung cấp tin tức
-                <strong>nhanh chóng, chính xác và đáng tin cậy</strong>. Chúng tôi
-                hướng đến việc mang lại cho người đọc những thông tin mới nhất
-                trong các lĩnh vực như xã hội, thể thao, công nghệ và giải trí.
+                <strong>nhanh chóng, chính xác và đáng tin cậy</strong>. Chúng
+                tôi hướng đến việc mang lại cho người đọc những thông tin mới
+                nhất trong các lĩnh vực như xã hội, thể thao, công nghệ và giải
+                trí.
               </p>
               <p>
-                Với đội ngũ biên tập viên và cộng tác viên giàu kinh nghiệm, chúng
-                tôi cam kết mang đến nội dung chất lượng, được kiểm chứng rõ ràng
-                và cập nhật liên tục.
+                Với đội ngũ biên tập viên và cộng tác viên giàu kinh nghiệm,
+                chúng tôi cam kết mang đến nội dung chất lượng, được kiểm chứng
+                rõ ràng và cập nhật liên tục.
               </p>
             </div>
             <div class="about-decoration">
@@ -165,11 +182,7 @@
           </div>
         </section>
 
-        <!-- 03 · Sứ mệnh -->
-        <section
-          class="mission section-block"
-          data-search-section="Sứ mệnh thông tin nhanh chóng chính xác minh bạch khách quan trải nghiệm đọc tin tiện lợi người dùng"
-        >
+        <section class="mission section-block">
           <div class="section-label">03 / Sứ mệnh</div>
           <h2>Sứ mệnh</h2>
           <div class="mission-list">
@@ -177,31 +190,36 @@
               <div class="mission-icon">⚡</div>
               <div>
                 <h3>Nhanh &amp; Chính xác</h3>
-                <p>Cung cấp thông tin nhanh chóng và chính xác, không để người đọc chờ đợi.</p>
+                <p>
+                  Cung cấp thông tin nhanh chóng và chính xác, không để người
+                  đọc chờ đợi.
+                </p>
               </div>
             </div>
             <div class="mission-item">
               <div class="mission-icon">🔍</div>
               <div>
                 <h3>Minh bạch</h3>
-                <p>Đảm bảo tính minh bạch và khách quan trong từng bài viết, từng dòng tin.</p>
+                <p>
+                  Đảm bảo tính minh bạch và khách quan trong từng bài viết, từng
+                  dòng tin.
+                </p>
               </div>
             </div>
             <div class="mission-item">
               <div class="mission-icon">📱</div>
               <div>
                 <h3>Tiện lợi</h3>
-                <p>Mang đến trải nghiệm đọc tin tiện lợi, mọi lúc mọi nơi cho người dùng.</p>
+                <p>
+                  Mang đến trải nghiệm đọc tin tiện lợi, mọi lúc mọi nơi cho
+                  người dùng.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- 04 · Tầm nhìn -->
-        <section
-          class="vision section-block"
-          data-search-section="Tầm nhìn nền tảng tin tức hàng đầu tin tưởng người dùng hàng ngày cập nhật thông tin"
-        >
+        <section class="vision section-block">
           <div class="section-label">04 / Tầm nhìn</div>
           <div class="vision-wrap">
             <h2>Tầm Nhìn</h2>
@@ -213,45 +231,52 @@
           </div>
         </section>
 
-        <!-- 05 · Giá trị -->
-        <section
-          class="values section-block"
-          data-search-section="Giá trị cốt lõi chính xác thông tin kiểm chứng nhanh chóng cập nhật 24/7 khách quan trung thực đa chiều tiện lợi giao diện thân thiện"
-        >
+        <section class="values section-block">
           <div class="section-label">05 / Giá trị</div>
           <h2>Giá Trị Cốt Lõi</h2>
           <div class="values-grid">
             <div class="value-card">
               <div class="value-icon">✅</div>
               <h3>Chính xác</h3>
-              <p>Thông tin được kiểm chứng rõ ràng trước khi đến tay người đọc.</p>
+              <p>
+                Thông tin được kiểm chứng rõ ràng trước khi đến tay người đọc.
+              </p>
             </div>
             <div class="value-card">
               <div class="value-icon">⏱</div>
               <h3>Nhanh chóng</h3>
-              <p>Cập nhật tin tức liên tục 24/7, không bỏ lỡ khoảnh khắc quan trọng.</p>
+              <p>
+                Cập nhật tin tức liên tục 24/7, không bỏ lỡ khoảnh khắc quan
+                trọng.
+              </p>
             </div>
             <div class="value-card">
               <div class="value-icon">⚖️</div>
               <h3>Khách quan</h3>
-              <p>Đưa tin trung thực, đa chiều, tôn trọng sự đa dạng của thông tin.</p>
+              <p>
+                Đưa tin trung thực, đa chiều, tôn trọng sự đa dạng của thông
+                tin.
+              </p>
             </div>
             <div class="value-card">
               <div class="value-icon">🖥️</div>
               <h3>Tiện lợi</h3>
-              <p>Giao diện thân thiện, dễ sử dụng trên mọi thiết bị và nền tảng.</p>
+              <p>
+                Giao diện thân thiện, dễ sử dụng trên mọi thiết bị và nền tảng.
+              </p>
             </div>
           </div>
         </section>
-
       </main>
 
-      <!-- ===== FOOTER — cấu trúc khớp với .site-footer trong styleprj.css ===== -->
       <footer class="site-footer">
         <div class="footer-top">
           <div class="footer-brand">
             <h2>Báo Mới</h2>
-            <p>Cập nhật tin tức nhanh, chính xác và khách quan. Đồng hành cùng bạn mỗi ngày.</p>
+            <p>
+              Cập nhật tin tức nhanh, chính xác và khách quan. Đồng hành cùng
+              bạn mỗi ngày.
+            </p>
             <div class="footer-social">
               <a href="#" title="Facebook">Fb</a>
               <a href="#" title="YouTube">Ytb</a>
@@ -294,62 +319,8 @@
           </span>
         </div>
       </footer>
-
-    </div><!-- end .wrapper -->
+    </div>
     <script src="../javascript/light_dark_mode.js"></script>
     <script src="../javascript/menu_hide_show.js"></script>
-    <script>
-      function normalize(str) {
-        return str
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "")
-          .replace(/đ/gi, "d")
-          .toLowerCase();
-      }
-
-      function runSearch() {
-        var raw     = document.querySelector(".search-box input").value.trim();
-        var keyword = normalize(raw);
-
-        var sections = document.querySelectorAll("#mainContent .section-block");
-        var oldMsg   = document.getElementById("search-no-result");
-        if (oldMsg) oldMsg.remove();
-
-        var found = 0;
-
-        sections.forEach(function (sec) {
-          var text = normalize(
-            (sec.dataset.searchSection || "") + " " + sec.textContent
-          );
-          if (keyword === "" || text.includes(keyword)) {
-            sec.style.display = "";
-            found++;
-          } else {
-            sec.style.display = "none";
-          }
-        });
-
-        if (found === 0 && keyword !== "") {
-          var msg = document.createElement("p");
-          msg.id = "search-no-result";
-          msg.textContent =
-            'Không tìm thấy nội dung nào cho từ khóa "' + raw + '".';
-          msg.style.cssText =
-            "text-align:center;padding:40px 0;color:#888;font-size:1rem;";
-          document.getElementById("mainContent").appendChild(msg);
-        }
-      }
-
-      document
-        .querySelector(".ntbutton")
-        .addEventListener("click", runSearch);
-
-      document
-        .querySelector(".search-box input")
-        .addEventListener("keydown", function (e) {
-          if (e.key === "Enter") runSearch();
-        });
-    </script>
   </body>
-</html>
 </html>
